@@ -1,4 +1,4 @@
-package Page;
+package page;
 
 import com.codeborne.selenide.ElementsCollection;
 import com.codeborne.selenide.SelenideElement;
@@ -7,7 +7,7 @@ import lombok.val;
 import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.$$;
 
-public class Dashboard {
+public class DashboardPage {
     private SelenideElement header = $("[data-test-id=dashboard]");
 
     private static SelenideElement firstCard = $("[data-test-id='92df3f1c-a033-48e6-8390-206f6b1f56c0'] .button");
@@ -16,15 +16,15 @@ public class Dashboard {
     private final String balanceStart = "баланс: ";
     private final String balanceFinish = " р.";
 
-    public Dashboard() {
+    public DashboardPage() {
     }
-    public static Transaction firstCardPushButton(){
+    public static TransactionPage firstCardPushButton(){
         firstCard.click();
-        return new Transaction();
+        return new TransactionPage();
     }
-    public static Transaction secondCardPushButton(){
+    public static TransactionPage secondCardPushButton(){
         secondCard.click();
-        return new Transaction();
+        return new TransactionPage();
 
     }
     public int getFirstCardBalance() {
