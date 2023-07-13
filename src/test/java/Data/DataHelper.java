@@ -1,7 +1,5 @@
 package Data;
-
 import lombok.Value;
-
 public class DataHelper {
     private DataHelper() {
     }
