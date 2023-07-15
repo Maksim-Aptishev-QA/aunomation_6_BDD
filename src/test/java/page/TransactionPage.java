@@ -15,7 +15,6 @@ public class TransactionPage {
         amountField.setValue(valueOf(amount));
         fromField.setValue(valueOf(from));
         transferButton.click();
-        new DashboardPage();
     }
 
     public void errorLimit() {
